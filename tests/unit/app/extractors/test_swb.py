@@ -1,0 +1,18 @@
+from app.extractors import SwbExtractor
+import pytest
+
+
+class TestSwbExtractor:
+
+    @pytest.fixture
+    def extractor(self):
+        return SwbExtractor()
+
+    @pytest.mark.asyncio
+    async def test_extract_uswx10(self, extractor):
+        assert await extractor.extract(USWX10) == {}
+
+
+USWX10 = b'''\
+<uswx:SvrWxrBulletin eventTrackingNumber="0569" gml:id="SV-565a1e31-458c-4831-86b3-e8bcd68c09b0" lifeCycleState="New" productType="Operational" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:uswx="http://nws.weather.gov/schemas/USWX/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nws.weather.gov/schemas/USWX/1.0 http://nws.weather.gov/schemas/USWX/1.0/SvrWxrBulletin/schema/svrWxrBulletin.xsd"><uswx:issuingWFO><uswx:officeName>Norman OK</uswx:officeName><uswx:officeIdentifier>OUN</uswx:officeIdentifier></uswx:issuingWFO><uswx:svrWxrInformation gml:id="SV-2abb0733-da9f-4be4-92fc-869f5e67992e"><om:type xlink:href="http://nws.weather.gov/codes/NWSI10-511/2014/Severe Thunderstorm Warning"/><om:phenomenonTime><gml:TimeInstant gml:id="SV-ca95b38c-f5f6-4063-8e36-32112b8e8e18"><gml:timePosition>2020-07-13T09:44:00Z</gml:timePosition></gml:TimeInstant></om:phenomenonTime><om:resultTime xlink:href="#SV-ca95b38c-f5f6-4063-8e36-32112b8e8e18"/><om:validTime><gml:TimePeriod gml:id="SV-fedf2391-b066-4bbe-9c40-daa0ce4136cd"><gml:beginPosition>2020-07-13T09:44:00Z</gml:beginPosition><gml:endPosition>2020-07-13T10:30:00Z</gml:endPosition></gml:TimePeriod></om:validTime><om:procedure xlink:href="http://www.nws.noaa.gov/directives/sym/pd01005011cur.pdf"/><om:observedProperty xlink:href="http://nws.weather.gov/codes/SevereWeatherPhenomena/Severe Thunderstorm"/><om:featureOfInterest><gml:DynamicFeature gml:id="SV-a4534e75-3688-4a7c-8600-bb04d6bb4d55"><gml:location><gml:Polygon axisLabels="latitude longitude" gml:id="SV-6b9cb838-4390-4184-a566-4124b54ee42e" srsDimension="2" srsName="urn:ogc:def:crs:EPSG::4326" uomLabels="deg deg"><gml:exterior><gml:LinearRing><gml:posList count="7">36.03 -98.21 35.76 -98.21 35.81 -98.59 35.81 -98.66 35.82 -98.75 36.02 -98.72 36.03 -98.21</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon></gml:location></gml:DynamicFeature></om:featureOfInterest><om:result><uswx:SvrWxrTextAndMotion><uswx:rationale>The National Weather Service in Norman has issued a * Severe Thunderstorm Warning for... Central Blaine County in northwestern Oklahoma... Southeastern Dewey County in northwestern Oklahoma... * Until 530 AM CDT. * At 443 AM CDT, a severe thunderstorm was located near Eagle City, moving east at 40 mph. HAZARD...70 mph wind gusts and nickel size hail. SOURCE...Radar indicated. IMPACT...Expect considerable tree damage. Damage is likely to  mobile homes, roofs, and outbuildings. * Locations impacted include... Watonga, Hitchcock, Oakwood, Eagle City and Fay. </uswx:rationale><uswx:callToAction>PRECAUTIONARY/PREPAREDNESS ACTIONS... For your protection move to an interior room on the lowest floor of a building.</uswx:callToAction><uswx:timeOfPosition><gml:TimeInstant gml:id="SV-2d338cc5-f502-4ffd-a4e9-4225a1e43a93"><gml:timePosition>2020-07-13T09:43:00Z</gml:timePosition></gml:TimeInstant></uswx:timeOfPosition><uswx:warnedPointFeatureMotion><uswx:position gml:id="SV-08cf2b94-67d4-460d-84da-be803968d7be"><gml:pos>35.92 -98.65</gml:pos></uswx:position><uswx:direction uom="deg">275</uswx:direction><uswx:speed uom="[kn_i]">35</uswx:speed></uswx:warnedPointFeatureMotion></uswx:SvrWxrTextAndMotion></om:result></uswx:svrWxrInformation><uswx:forecasterID>WR</uswx:forecasterID></uswx:SvrWxrBulletin>
+'''  # noqa: E501

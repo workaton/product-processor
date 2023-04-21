@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "app"
+version = "0.0.0"
+description = "product-processor"
+authors = ["Jeffrey Swofford <jeffrey.swofford@noaa.gov>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aio-msgpack-rpc = "^0.2.0"
+cached-property = "^1.5.2"
+click = "^7.0"
+immutabledict = "^1.0"
+lxml = "^4.5"
+ncar-airsigmet-code = "^0.0.4"
+ngitws-framework = {extras = ["speedups"], version = "^1.2"}
+ngitws-gdal = "^2.4"
+pendulum = "^2.0"
+pillow = "^7.2"
+python-dotenv = "^0.10"
+tac-to-xml = "^0.0.3"
+xmltodict = "^0.12.0"
+jinja2 = "^3.1.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7"
+flake8-docstrings = "^1.5"
+flake8-import-order = "^0.18.1"
+pep8-naming = "^0.11.1"
+pytest = "^6.0.1"
+pytest-asyncio = "^0.14.0"
+pytest-cov = "^2.7"
+pytest-subprocess = "^0.1.1"
+mypy = "^0.770"
+time-machine = "^2.0.1"
+xmldiff = "^2.4"
+
+[tool.poetry.scripts]
+product-processor = "app.commands:main"
+
+[[tool.poetry.source]]
+name = "private"
+url = "https://vm-bldr-devops-pkg-repo1.ncep.noaa.gov/nexus/repository/pypi/simple"
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"

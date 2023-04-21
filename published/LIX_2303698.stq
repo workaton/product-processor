@@ -1,0 +1,66 @@
+BMBB91 KLIX 211300
+STQLIX
+
+A SPOT FORECAST REQUEST HAS BEEN RECEIVED FOR INCIDENT TYPE
+PRESCRIBED NAMED "De Soto Burn Block 6355 North"
+
+       REQUEST TYPE:  IMMEDIATE
+               DATE:  03/21/23
+               TIME:  1300
+       DELIVER DATE:  03/21/23
+       DELIVER TIME:  1300
+        SUBMIT DATE:  03/21/23
+        SUBMIT TIME:  1300
+       PROJECT NAME:  De Soto Burn Block 6355 North
+       PROJECT TYPE:  PRESCRIBED
+     REQUEST REASON:  IAMS
+  REQUESTING AGENCY:  USDA Forest Service
+REQUESTING OFFICIAL:  Mark Jamieson
+    EMERGENCY PHONE:  6012092866
+              EMAIL:  mark.jamieson@usda.gov
+              STATE:  MS
+               DLAT:  30.6879
+               DLON:  88.8764
+               CLON:  -88.8764
+                FAX:
+           EXPOSURE:  south
+          FUEL TYPE:  southern rough
+         SHELTERING:  partial
+   BOTTOM ELEVATION:
+      TOP ELEVATION:
+       SIZE (ACRES):  1915
+ REQUESTING HYSPLIT:  NO
+             FORMAT:  T
+           INTERVAL:  1,1,1,1
+
+WEATHER CONDITION AT INCIDENT OR NEARBY STATIONS
+
+...REMARKS...
+What is the probability of
+fog development for Friday
+morning?
+
+The wind gusts will be
+critical as to whether we
+commit to this prescribe
+burn.  Please pay close
+attention to this.
+
+...WEATHER PARAMETERS REQUESTED...
+            SKY/WEATHER:  1,1,1,1
+            TEMPERATURE:  1,1,1,1
+               HUMIDITY:  1,1,1,1
+CHANCE OF PRECIPITATION:  1,1,1,1
+        RAINFALL AMOUNT:  1,1,1,0
+           WIND (20 FT):  1,1,1,0
+        TRANSPORT WINDS:  1,1,1,0
+                  LVORI:  1,1,1,1
+               DEWPOINT:  1,1,1,1
+   APPARENT TEMPERATURE:  1,1,1,0
+MIXING HEIGHT (KM OR M):  1,1,1,1
+  TRANSPORT WINDS (M/S):  1,1,1,1
+     MIXING HEIGHT (FT):  1,1,1,0
+
+SITE: LIX
+OFILE: 2303698.0
+TIMEZONE: CST6CDT

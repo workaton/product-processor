@@ -1,0 +1,56 @@
+BMBB91 KEAX 271030
+STQEAX
+
+A SPOT FORECAST REQUEST JUST HAD OBSERVATIONS ADDED TO IT FOR
+INCIDENT TYPE WILDFIRE NAMED "Example Test Results"
+
+       REQUEST TYPE:  OBSERVATION
+               DATE:  07/27/15
+               TIME:  1130
+       DELIVER DATE:  07/28/15
+       DELIVER TIME:  0800
+        SUBMIT DATE:  07/27/15
+        SUBMIT TIME:  1100
+       PROJECT NAME:  Example Test Results
+       PROJECT TYPE:  WILDFIRE
+     REQUEST REASON:  TEST
+  REQUESTING AGENCY:  Testing Agency
+REQUESTING OFFICIAL:  Testing Official
+    EMERGENCY PHONE:  555-555-5555 5555
+              EMAIL:  test@test.test
+              STATE:  MO
+               DLAT:  39.1189
+               DLON:  94.5207
+               CLON:  -94.5207
+                FAX:  444-444-4444
+           EXPOSURE:  North
+          FUEL TYPE:  grass
+         SHELTERING:  unsheltered
+   BOTTOM ELEVATION:  111
+      TOP ELEVATION:  888
+       SIZE (ACRES):  33
+ REQUESTING HYSPLIT:  NO
+             FORMAT:  C
+           INTERVAL:  1,1,1,1
+
+WEATHER CONDITION AT INCIDENT OR NEARBY STATIONS
+Test source [07/27/15 0600] WB=11 Temp=11 Sky=Clear Elev=666
+                            Rmks=TEST Td=11 RH=11 Wind=11@N Wx=Rain
+
+...REMARKS...
+How much wood could a woodchuck chuck if a woodchuck could chuck
+wood?
+
+...WEATHER PARAMETERS REQUESTED...
+CHANCE OF WETTING RAIN:  0,0,0,1
+   MAX/MIN TEMPERATURE:  0,0,0,1
+           SKY/WEATHER:  0,0,0,1
+       TRANSPORT WINDS:  0,0,0,1
+         MIXING HEIGHT:  0,0,0,1
+          WIND (20 FT):  0,0,0,1
+          HAINES INDEX:  0,0,0,1
+      MAX/MIN HUMIDITY:  0,0,0,1
+
+SITE: EAX
+OFILE: 1500001.0
+TIMEZONE: CST

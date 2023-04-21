@@ -1,0 +1,70 @@
+BMBB91 {{ station }} {{ now|datetime('%d%H%M') }}
+STQ{{ site }}
+
+{% if action == 'observation' %}
+A SPOT FORECAST REQUEST JUST HAD OBSERVATIONS ADDED TO IT FOR INCIDENT TYPE {{ project_type | upper }} NAMED "{{ project_name }}"
+{% elif action == 'modified' %}
+A SPOT FORECAST REQUEST FOR PROJECT "{{ project_name }}" HAS BEEN MODIFIED
+{% elif action == 'deleted' %}
+THE SPOT FORECAST REQUEST FOR PROJECT "{{ project_name }}" HAS BEEN DELETED
+{% elif action == 'feedback' %}
+FEEDBACK WAS JUST RECEIVED FOR INCIDENT {{ project_type | upper }} NAMED "{{ project_name }}"
+
+FEEDBACK CAN BE VIEWED ON THE WEBSITE.
+{% else %}
+A SPOT FORECAST REQUEST HAS BEEN RECEIVED FOR INCIDENT TYPE {{ project_type | upper }} NAMED "{{ project_name }}"
+{% endif %}
+
+       REQUEST TYPE:  {{ action | upper }}
+               DATE:  {{ start_time | datetime('%m/%d/%y') }}
+               TIME:  {{ start_time | datetime('%H%M') }}
+       DELIVER DATE:  {{ deliver_time | datetime('%m/%d/%y') }}
+       DELIVER TIME:  {{ deliver_time | datetime('%H%M') }}
+        SUBMIT DATE:  {{ submit_time | datetime('%m/%d/%y') }}
+        SUBMIT TIME:  {{ submit_time | datetime('%H%M') }}
+       PROJECT NAME:  {{ project_name }}
+       PROJECT TYPE:  {{ project_type | upper }}
+     REQUEST REASON:  {{ reason | default("", True) }}
+  REQUESTING AGENCY:  {{ agency | default("", True) }}
+REQUESTING OFFICIAL:  {{ official | default("", True) }}
+    EMERGENCY PHONE:  {{ phone | default("", True) }} {{ phone_ext | default("", True) }}
+              EMAIL:  {{ email | default("", True) }}
+              STATE:  {{ state }}
+               DLAT:  {{ lat }}
+               DLON:  {{ lon * -1 }}
+               CLON:  {{ lon }}
+                FAX:  {{ fax | default("", True) }}
+{% if action != "deleted" %}
+{% if project_type == "Wildfire" or project_type == "Prescribed" %}
+           EXPOSURE:  {{ exposure | default("", True) }}
+          FUEL TYPE:  {{ fuel_type | default("", True) }}
+         SHELTERING:  {{ sheltering | default("", True) }}
+   BOTTOM ELEVATION:  {{ min_elevation | default("", True) }}
+      TOP ELEVATION:  {{ max_elevation | default("", True) }}
+{% endif %}
+       SIZE (ACRES):  {{ size | default("", True) }}
+ REQUESTING HYSPLIT:  {% if hysplit %}YES{% else %}NO{% endif %}
+
+             FORMAT:  {% if formatting %}{{ (formatting | first)["type"] }}{% endif %}
+
+           INTERVAL:  {{ formatting | join(",", "temporal_res") }}
+
+WEATHER CONDITION AT INCIDENT OR NEARBY STATIONS
+{% for observation in observations %}
+{{ observation.source | default("UNKN") | left(12) }}[{{ observation.time | datetime('%m/%d/%y %H%M') | default("UNKN") | left(13) }}] {{ observation.data | keyvalues | join(" ") | linewrap(69 - 28, 28) }}
+{% endfor %}
+
+...REMARKS...
+{{ remarks | default("", True) }}
+
+...WEATHER PARAMETERS REQUESTED...
+{% for name, periods in elements.items() %}
+{{ ("%" + elements.keys() | map("length") | sort | last | string + "s") | format(name) | upper }}:  {{ periods|join(",") }}
+{% endfor %}
+{% endif %}
+
+SITE: {{ site }}
+OFILE: {{ id }}.{{ update }}
+TIMEZONE: {{ timezone }}
+
+

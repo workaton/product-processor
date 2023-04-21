@@ -1,0 +1,22 @@
+[Unit]
+Description=NGITWS product processor
+After=network.target
+
+[Service]
+Environment=APP_NAME=product-processor
+EnvironmentFile=/etc/opt/ngitws/ngitws.env
+EnvironmentFile=/etc/opt/ngitws/product-processor.env
+EnvironmentFile=/etc/opt/ngitws/product-processor-secret.env
+User=ngitws
+Group=ngitws
+ExecStartPre=-/usr/bin/mkdir -p $NWSTG_PUBLISHER_BASE_PATH
+ExecStartPre=-/usr/bin/chown ngitws:ngitws $NWSTG_PUBLISHER_BASE_PATH
+ExecStartPre=-/usr/bin/chmod 775 $NWSTG_PUBLISHER_BASE_PATH
+ExecStart=/opt/ngitws/bin/product-processor daemon --log-format JSON
+PermissionsStartOnly=true
+Restart=on-failure
+RuntimeDirectory=product-processor
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
