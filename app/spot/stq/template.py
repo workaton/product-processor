@@ -9,10 +9,8 @@ from jinja2.ext import Extension
 
 class TemplateEngine(object):
     '''Creates documents based on templates.
-
     The custom extensions in this module will be loaded automatically into the
     initialized Jinja environment.
-
     '''
 
     standard_extensions = set()
@@ -25,9 +23,7 @@ class TemplateEngine(object):
 
     def __init__(self, base_directory=None, **kwargs):
         '''Initializes a template environment.
-
         :param base_directory: base directory for templates
-
         '''
         env_args = dict(kwargs)
         self.__logger = logging.getLogger(__name__)
@@ -103,11 +99,8 @@ class JustifyExtension(Extension):
 @TemplateEngine.extension
 class KeyvaluesExtension(Extension):
     ''' Jinja2 extension for turning dictionaries into key-value pair strings
-
     This converts a dictionary into a list of key-value pair strings like so:
-
     { "a": "Test", "b": "Another" } --> ["a=Test", "b=Another"]
-
     '''
 
     def __init__(self, environment):
@@ -121,10 +114,8 @@ class KeyvaluesExtension(Extension):
 @TemplateEngine.extension
 class LinewrapExtension(Extension):
     ''' Jinja2 extension for wrapping long lines
-
     This is necessary since the width of the wordwrap filter is a minimum
     when break_long_words is False.  We want it to be a maximum.
-
     '''
 
     def __init__(self, environment):

@@ -1,0 +1,58 @@
+BMBB91 KCAE 211301
+STQCAE
+
+A SPOT FORECAST REQUEST HAS BEEN RECEIVED FOR INCIDENT TYPE
+PRESCRIBED NAMED "JAIRO from SPOT"
+
+       REQUEST TYPE:  IMMEDIATE
+               DATE:  03/21/23
+               TIME:  1301
+       DELIVER DATE:  03/21/23
+       DELIVER TIME:  1301
+        SUBMIT DATE:  03/21/23
+        SUBMIT TIME:  1301
+       PROJECT NAME:  JAIRO from SPOT
+       PROJECT TYPE:  PRESCRIBED
+     REQUEST REASON:  IAMS
+  REQUESTING AGENCY:  USFWS
+REQUESTING OFFICIAL:  Nate Perrine
+    EMERGENCY PHONE:  9079039424
+              EMAIL:  nathan_perrine@fws.gov
+              STATE:  SC
+               DLAT:  34.5692
+               DLON:  80.2397
+               CLON:  -80.2397
+                FAX:
+           EXPOSURE:  Flat
+          FUEL TYPE:  Timber
+         SHELTERING:  full
+   BOTTOM ELEVATION:
+      TOP ELEVATION:
+       SIZE (ACRES):  650
+ REQUESTING HYSPLIT:  NO
+             FORMAT:  C
+           INTERVAL:  1,2,3,4
+
+WEATHER CONDITION AT INCIDENT OR NEARBY STATIONS
+
+...REMARKS...
+
+
+...WEATHER PARAMETERS REQUESTED...
+             SKY/WEATHER:  1,1,1,0
+             TEMPERATURE:  1,1,1,0
+                HUMIDITY:  1,1,1,0
+ CHANCE OF PRECIPITATION:  1,1,1,0
+LIGHTNING ACTIVITY LEVEL:  1,1,1,0
+            WIND (20 FT):  1,1,1,0
+          PEAK WIND GUST:  1,1,1,0
+           MIXING HEIGHT:  1,1,1,0
+         TRANSPORT WINDS:  1,1,1,0
+              DISPERSION:  1,1,1,0
+                   LVORI:  1,1,1,0
+                     ADI:  1,1,1,0
+    APPARENT TEMPERATURE:  1,1,1,0
+
+SITE: CAE
+OFILE: 2303724.0
+TIMEZONE: EST5EDT

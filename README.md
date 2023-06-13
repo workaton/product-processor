@@ -54,6 +54,7 @@ The project has a number of resource types, which are loosely coupled via entry 
 * converters
 * extractors
 * splitters
+* SPOT (STQ & FWS)
 
 In general, registering a pluggable resource involves adding an entry to the project's _pyproject.toml_ of the form:
 
@@ -98,3 +99,18 @@ IWXXM = "app.splitters:IwxxmSplitter"
 ```
 
 [poetry]: https://python-poetry.org/docs/
+
+
+### SPOT (STQ & FWS)
+
+The Product-Processor handles JSON and text file products needed by the SPOT application. Those being `STQ` and `FWS` files objects.
+
+#### STQ:
+Process JSON data posted by SPOT in the SPOT_RQUESTS catalog to create the STQ files, which are then posted into SPOT_STQ_FILES and SPOT_STQ_METADATA respectively. 
+
+STQ files are conformed using a jinja2 template. 
+
+#### FWS:
+Extract data from text file objects posted in NGITWS_FWS_FILES catalog. These data is then posted in NGITWS_FWS_METADATA.
+
+Both the text file object and the data extracted are sent to SPOT via the SPOT-API. 
