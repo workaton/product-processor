@@ -1,0 +1,139 @@
+{
+    "now": "2023-03-21 13:00:51",
+    "action": "immediate",
+    "elements": {
+        "Sky/Weather": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Temperature": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Humidity": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Chance of Precipitation": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Rainfall Amount": [
+            1,
+            1,
+            1,
+            0
+        ],
+        "Wind (20 FT)": [
+            1,
+            1,
+            1,
+            0
+        ],
+        "Transport Winds": [
+            1,
+            1,
+            1,
+            0
+        ],
+        "LVORI": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Dewpoint": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Apparent Temperature": [
+            1,
+            1,
+            1,
+            0
+        ],
+        "Mixing Height (km or m)": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Transport Winds (m/s)": [
+            1,
+            1,
+            1,
+            1
+        ],
+        "Mixing Height (ft)": [
+            1,
+            1,
+            1,
+            0
+        ]
+    },
+    "observations": [],
+    "formatting": [
+        {
+            "spot_id": 2303698,
+            "period": 1,
+            "type": "T",
+            "temporal_res": 1
+        },
+        {
+            "spot_id": 2303698,
+            "period": 2,
+            "type": "T",
+            "temporal_res": 1
+        },
+        {
+            "spot_id": 2303698,
+            "period": 3,
+            "type": "T",
+            "temporal_res": 1
+        },
+        {
+            "spot_id": 2303698,
+            "period": 4,
+            "type": "T",
+            "temporal_res": 1
+        }
+    ],
+    "id": 2303698,
+    "update": 0,
+    "site": "LIX",
+    "station": "KLIX",
+    "timezone": "CST6CDT",
+    "start_time": "2023-03-21 13:00:51",
+    "deliver_time": "2023-03-21 13:00:51",
+    "submit_time": "2023-03-21 13:00:51",
+    "project_name": "De Soto Burn Block 6355 North",
+    "project_type": "Prescribed",
+    "reason": "IAMS",
+    "agency": "USDA Forest Service ",
+    "official": "Mark Jamieson",
+    "phone": "6012092866",
+    "phone_ext": "",
+    "email": "mark.jamieson@usda.gov",
+    "fax": "",
+    "state": "MS",
+    "lat": 30.6879,
+    "lon": -88.8764,
+    "exposure": "south",
+    "fuel_type": "southern rough",
+    "sheltering": "partial",
+    "min_elevation": null,
+    "max_elevation": null,
+    "size": 1915,
+    "hysplit": 0,
+    "remarks": "What is the probability of  \r\nfog development for Friday  \r\nmorning?   \r\n \r\nThe wind gusts will be  \r\ncritical as to whether we  \r\ncommit to this prescribe  \r\nburn.  Please pay close  \r\nattention to this."
+}
